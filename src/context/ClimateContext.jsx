@@ -7,12 +7,16 @@ export const useClimate = () => useContext(ClimateContext);
 
 export default function ClimateProvider({children}) {
     const [ greenhouseTemp, setGreenhouseTemp] = useState(50);
-
+    const [greenhouseHumidity, setGreenhouseHumidity] = useState(40);
+//make sure the value of the context Provider is set to an object with a key
+//to read the useState values
     return (
         <ClimateContext.Provider
         value = {{
             greenhouseTemp,
-            setGreenhouseTemp
+            setGreenhouseTemp,
+            greenhouseHumidity,
+            setGreenhouseHumidity
         }}
         >
             {children}

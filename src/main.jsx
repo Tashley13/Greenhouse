@@ -7,10 +7,10 @@ import ClimateProvider from './context/ClimateContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ClimateProvider>
       <ThemeProvider>
-       <ClimateProvider>
         <App />
-        </ClimateProvider>
       </ThemeProvider>
+    </ClimateProvider>
   </React.StrictMode>
 );
